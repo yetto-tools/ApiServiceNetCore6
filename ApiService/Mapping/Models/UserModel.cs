@@ -6,11 +6,6 @@ namespace ApiService.Mapping.Models
     [Table("usuario")]
     public class UserModel
     {
-        public UserModel()
-        {
-            PersonId = new PersonModel();
-        }
-
         [Column("id_usuario")]
         public string Id_Usuario { set; get; } = string.Empty;
         public string Nombre_Usuario { set; get; } = string.Empty;
@@ -22,7 +17,6 @@ namespace ApiService.Mapping.Models
         public DateTime Fecha_Ing { set; get; }
         public byte Set_Semana_Ant { set; get; }
         public byte Semana_A_Excluir { set; get; }
-        public PersonModel PersonId { set; get; }
     }
 }
 

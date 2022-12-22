@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ApiService.Controllers.V1
+namespace ApiService.Controllers.Default
 {
     [ApiController]
     [Route("")]

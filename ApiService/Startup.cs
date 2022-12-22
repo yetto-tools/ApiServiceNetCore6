@@ -35,6 +35,7 @@ namespace ApiService
 
             services.AddSwaggerGen( c =>
             {
+                c.SwaggerDoc("default", new OpenApiInfo { Title = "ApiService", Version = "default" });
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiService", Version = "v1" });
                 c.SwaggerDoc("v2", new OpenApiInfo { Title = "ApiService", Version = "v2" });
                 //c.AddSecurityDefinition("Service", new OpenApiSecurityScheme
@@ -70,7 +71,8 @@ namespace ApiService
             // This middleware serves the Swagger documentation UI
             app.UseSwaggerUI(c =>
             {
-                { 
+                {
+                    c.SwaggerEndpoint("/swagger/default/swagger.json", "API Service Default");
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Service V1");
                     c.SwaggerEndpoint("/swagger/v2/swagger.json", "API Service V2");
                 }

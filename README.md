@@ -1,4 +1,4 @@
-# ApiService NetCore 6.0.11
+# ApiService NetCore ^6.0
 #### Dependencies
 |  Package  |  Version  |
 |-----------|-----------|
